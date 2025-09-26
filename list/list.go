@@ -1,4 +1,4 @@
-package exercises
+package list
 
 type Node[T comparable] struct {
 	Value T
@@ -87,4 +87,13 @@ func (l *List[T]) Insert(index int, val T) bool {
 		return true
 	}
 	return false
+}
+
+func (l *List[T]) Index(val T) int {
+	for it, index := l.Front(), 0; it != nil; it, index = it.Next(), index+1 {
+		if it.Value == val {
+			return index
+		}
+	}
+	return -1
 }
