@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	test11_1()
+	exercises.Exercise_12_3()
 }
 
 func test8_1() {
